@@ -1,0 +1,27 @@
+{
+  "name": "j5-exploring",
+  "version": "0.0.1",
+  "description": "Explorations of node.js with johnny-five for communications with Arduino boards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmerlin/j5-exploring.git"
+  },
+  "keywords": [
+    "node",
+    "arduino",
+    "johnny-five"
+  ],
+  "author": "H. Phil Duby",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmerlin/j5-exploring/issues"
+  },
+  "homepage": "https://github.com/mmerlin/j5-exploring",
+  "dependencies": {
+    "johnny-five": "*"
+  }
+}
