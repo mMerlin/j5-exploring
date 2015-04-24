@@ -8,3 +8,6 @@ The latest version is 0.8.58.  Start by seeing if the lastest version has the
 symptoms.
 
 Confirmed that the sample digital sensor data event handler is not getting called.
+
+Moving to lower level / simpler Pin component.  Still problems there, including
+that the constructor does not honor a mode option parameter.
