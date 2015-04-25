@@ -13,14 +13,14 @@ var myBoard = new five.Board();
  * 'this' parameter / variable.  All methods / properties of the specific
  * board are available as properties of 'this'.
  */
-function myProjectCode() {
+function boardIsReady() {
   /* jshint validthis:true */
   // Project code goes here
 }
 
 // This is where the program actully starts running.  It is kept at the end,
-// after the callback function myProjectCode has been created, so that the
+// after the callback function boardIsReady has been created, so that the
 // jslint program does not complain about using something before it was defined.
 // The way javascript works, it is not a technical requirement.  Just good
 // practice.
-myBoard.on('ready', myProjectCode);
+myBoard.on('ready', boardIsReady);
