@@ -1,7 +1,7 @@
 'use strict';
 var five = require('johnny-five');
 var myBoard = new five.Board();
-var period = 9000;
+var period = 1000;
 var aCfg = {
   id: 'Analog test',
   pin: 'A5',
@@ -16,15 +16,21 @@ var dCfg = {
   range: [0, 1],
   freq: period
 };
-function dataCallback(err, val) {
-  /* jshint validthis: true */
-  console.log('data callback for', this.id, 'with:', err, val);
+
+function dataCallback(err, val, more) {
+  /* jshint validthis:true */
+  console.log('data for:', this.id, 'with value:', this.value,
+    'and arguments', err, val, more
+    );
 }
-myBoard.on('ready', function () {
+
+function boardIsReady() {
   /* jshint validthis: true */
   var a, d;
   a = new five.Sensor(aCfg);
   d = new five.Sensor(dCfg);
-  // a.on('data', dataCallback);
-  // d.on('data', dataCallback);
-});
+  a.on('data', dataCallback);
+  d.on('data', dataCallback);
+}
+
+myBoard.on('ready', boardIsReady);

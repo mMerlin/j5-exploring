@@ -6,13 +6,21 @@ var cfg = {
   pin: 8,
   type: 'digital',
   range: [0, 1],
-  freq: 9000
+  freq: 1000
 };
-function dataCallback(err, val) {
-  /* jshint validthis: true */
-  console.log('data callback for', this.id, 'with:', err, val);
+
+function dataCallback(err, val, more) {
+  /* jshint validthis:true */
+  console.log('data for:', this.id, 'with value:', this.value,
+    'and arguments', err, val, more
+    );
 }
-myBoard.on('ready', function () {
+
+function boardIsReady() {
+  /* jshint validthis:true */
   var tst = new five.Sensor(cfg);
+  // this.pinMode(cfg.pin, five.Pin.INPUT);
   tst.on('data', dataCallback);
-});
+}
+
+myBoard.on('ready', boardIsReady);

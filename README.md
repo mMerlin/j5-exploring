@@ -11,3 +11,4 @@ Confirmed that the sample digital sensor data event handler is not getting calle
 
 Moving to lower level / simpler Pin component.  Still problems there, including
 that the constructor does not honor a mode option parameter.
+https://github.com/rwaldron/johnny-five/issues/749
