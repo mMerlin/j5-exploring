@@ -24,7 +24,7 @@ function dataCallback(arg) {
 
 function boardIsReady() {
   var tst = new five.Pin(cfg);
-  tst.query(function(state) { console.log(state); });
+  tst.query(function (state) { console.log(state); });
   tst.on('data', dataCallback);
   tst.io.digitalRead(tst.pin, readCallback1);
   five.Pin.read(tst, readCallback2);

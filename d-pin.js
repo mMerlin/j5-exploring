@@ -26,7 +26,7 @@ function dataCallback(arg) {
 function boardIsReady() {
   /* jshint validthis:true */
   var tst = new five.Pin(cfg);
-  tst.query(function(state) { console.log(state); });
+  tst.query(function (state) { console.log(state); });
   // this.pinMode(cfg.pin, five.Pin.INPUT);
   tst.on('data', dataCallback);
   tst.io.digitalRead(tst.pin, readCallback1);

@@ -16,12 +16,12 @@
     "johnny-five"
   ],
   "author": "H. Phil Duby",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mmerlin/j5-exploring/issues"
   },
   "homepage": "https://github.com/mmerlin/j5-exploring",
   "dependencies": {
-    "johnny-five": "*"
+    "johnny-five": "rwaldron/johnny-five"
   }
 }
